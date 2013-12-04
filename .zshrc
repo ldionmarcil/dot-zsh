@@ -4,6 +4,7 @@ autoload -U colors && colors
 # exports
 EDITOR='emacs -nw'
 PROMPT="%~%{$fg[yellow]%}%#%{$reset_color%} "
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
 
 #aliases
 alias ls='ls -la --color=auto'

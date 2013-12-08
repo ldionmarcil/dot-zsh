@@ -2,9 +2,9 @@
 autoload -U colors && colors
 
 # exports
-EDITOR='emacs -nw'
-PROMPT="%~%{$fg[yellow]%}%#%{$reset_color%} "
-WORDCHARS='*?_-.[]~=&;!#$%^(){}<>'
+EDITOR='emacs -nw' #default editor
+PROMPT="%~%{$fg[yellow]%}%#%{$reset_color%} " #prompt format
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' #word non-delimiter
 
 #aliases
 alias ls='ls -la --color=auto'
@@ -30,3 +30,6 @@ zle -N _history-incremental-preserving-pattern-search-backward
 bindkey "^R" _history-incremental-preserving-pattern-search-backward
 bindkey -M isearch "^R" history-incremental-pattern-search-backward
 bindkey "^S" history-incremental-pattern-search-forward
+
+#jobs
+setopt NO_HUP NO_CHECK_JOBS #no HUP signal to bg jobs upon shell exit

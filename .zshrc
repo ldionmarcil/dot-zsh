@@ -1,13 +1,10 @@
-#enable colors
-autoload -U colors && colors
-
-# exports
-EDITOR='emacs -nw' #default editor
-PROMPT="%~%{$fg[yellow]%}%#%{$reset_color%} " #prompt format
-WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' #word non-delimiter
-
 #aliases
 alias ls='ls -la --color=auto'
+
+#config
+autoload -U colors && colors
+PROMPT="%~%{$fg[yellow]%}%#%{$reset_color%} " #prompt format
+WORDCHARS='*?_-.[]~=&;!#$%^(){}<>' #word non-delimiter
 
 #history
 HISTSIZE=1000
